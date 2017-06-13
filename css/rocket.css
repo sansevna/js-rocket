@@ -32,7 +32,11 @@
 	background-color: grey;
 	transition: bottom 5s;
 }
-.rocket.flying{
+body.body-state1 .rocket{
+	transition: none;
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket{
 	bottom: 1000px;
 }
 
@@ -40,13 +44,15 @@
 .state2,
 .state3,
 .state4,
-.state5{display: none;}
+.state5{
+	display: none;
+}
 
-body.body-state1.state1{display: block;}
-body.body-state2.state2{display: block;}
-body.body-state3.state3{display: block;}
-body.body-state4.state4{display: block;}
-body.body-state5.state5{display: block;}
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
 
 a{}
 a.button{}
