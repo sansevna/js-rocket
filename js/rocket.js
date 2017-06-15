@@ -13,6 +13,23 @@ var changeState = function(state)
 		 timer = setInterval(function(){
 		 	countDownNumber = countDownNumber - 1;
 		 	document.getElementById('countdown').innerHTML = countDownNumber;
+
+		 	if(countDownNumber > 3 && countDownNumber <= 6) {
+		 		//can't wait
+		 		document.getElementById('nervous').className = 'nervous show';
+		 	}
+		 		else{
+		 			document.getElementById('nervous').className = 'nervous';
+		 		}
+		 	
+		 	if(countDownNumber > 1 && countDownNumber <= 3) {
+		 		//be nervous
+		 		document.getElementById('cant-wait').className = 'cant-wait show';
+		 	}
+		 		else{
+		 			document.getElementById('cant-wait').className = 'cant-wait';
+		 		}
+
 			if(countDownNumber <= 0)
 			{				
 				changeState(3);
@@ -26,7 +43,7 @@ var changeState = function(state)
 				console.log('randomNumber:', randomNumber)
 
 				// succes
-				if (randomNumber > 2) {
+				if (randomNumber > 4) {
 					changeState(4);
 
 				} else {
